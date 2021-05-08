@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NetflixClone">
-        <activity android:name=".ListMovies"></activity>
+        <activity android:name=".DetailsMovies"></activity>
+        <activity android:name=".ListMovies" />
         <activity android:name=".FormRegister" />
         <activity android:name=".FormLogin" />
         <activity android:name=".MainActivity">

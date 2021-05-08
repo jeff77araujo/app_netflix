@@ -1,16 +1,18 @@
 package com.jeff.netflixclone
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.GridLayout
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.jeff.netflixclone.adapter.MoviesAdapter
 import com.jeff.netflixclone.databinding.ActivityListMoviesBinding
 import com.jeff.netflixclone.model.addMovies
+import com.jeff.netflixclone.onclick.OnItemClickListener
+import com.jeff.netflixclone.onclick.addOnItemClickListener
 
 class ListMovies : AppCompatActivity() {
 
@@ -25,6 +27,21 @@ class ListMovies : AppCompatActivity() {
         recycler_movies.adapter = MoviesAdapter(addMovies())
         recycler_movies.layoutManager = GridLayoutManager(applicationContext, 3)
 
+        recycler_movies.addOnItemClickListener(object : OnItemClickListener{
+            override fun onItemClicked(position: Int, view: View) {
+
+                when {
+                    position == 0 -> detailsMovies()
+                    position == 1 -> detailsMovies()
+                    position == 2 -> detailsMovies()
+                }
+            }
+        })
+
+    }
+
+    private fun detailsMovies() {
+        startActivity(Intent(this, DetailsMovies::class.java))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
