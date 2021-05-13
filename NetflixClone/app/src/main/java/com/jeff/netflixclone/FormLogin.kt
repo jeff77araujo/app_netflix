@@ -53,7 +53,7 @@ class FormLogin : AppCompatActivity() {
                 }
             }.addOnFailureListener {
 
-            var error = it
+            val error = it
 
             when {
                 error is FirebaseAuthInvalidCredentialsException -> messageError.text = "E-mail ou Senha estão incorretos"

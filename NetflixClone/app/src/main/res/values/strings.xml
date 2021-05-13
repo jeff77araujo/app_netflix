@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">NetflixClone</string>
+    <string name="app_name">Netflix - Clone</string>
+    <string name="description_movies">
+        O mutante Geralt de Rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.
+    </string>
+    <string name="elenco_the_witcher">Estrelando:Henry Cavill,Anya Chalotra,Freya Allan Criação:Lauren Schmidt Hissrich</string>
 </resources>
